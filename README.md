@@ -1,4 +1,4 @@
-# excalidraw-sync
+# drawbridge
 
 Real-time collaborative drawing between humans and AI. You draw in the browser, your AI assistant draws via the CLI — both see each other's changes live.
 
@@ -38,8 +38,8 @@ AI coding assistants like Claude Code, Cursor, and Copilot are great at text —
 **1. Clone and install:**
 
 ```bash
-git clone https://github.com/stevejboyer/excalidraw-sync.git
-cd excalidraw-sync
+git clone https://github.com/stevejboyer/drawbridge.git
+cd drawbridge
 pnpm install
 ```
 
@@ -71,9 +71,9 @@ You should see a list of the elements you just drew.
 
 Once the server is running and the browser is open, tell your AI assistant about the CLI. Here's an example prompt you can give it:
 
-> I have excalidraw-sync running locally. It's a shared Excalidraw canvas — I draw in the browser and you draw via the CLI. The server is at localhost:3101.
+> I have drawbridge running locally. It's a shared Excalidraw canvas — I draw in the browser and you draw via the CLI. The server is at localhost:3101.
 >
-> Here are the commands you can use (run from the excalidraw-sync directory):
+> Here are the commands you can use (run from the drawbridge directory):
 >
 > - `node cli/index.js read-summary` — see what's on the canvas
 > - `node cli/index.js draw-text <x> <y> <text>` — add text
@@ -173,7 +173,7 @@ node cli/index.js read-summary --file
 ## Architecture
 
 ```
-excalidraw-sync/
+drawbridge/
 ├── cli/index.js          # CLI tool — drawing commands, read/write, export
 ├── server/index.js       # Express + WebSocket server — syncs file ↔ browser
 ├── src/

@@ -175,7 +175,7 @@ watcher.on("change", () => {
 });
 
 server.listen(PORT, () => {
-  console.log(`\n  excalidraw-sync server running:`);
+  console.log(`\n  drawbridge server running:`);
   console.log(`    WebSocket:  ws://localhost:${PORT}/ws`);
   console.log(`    REST API:   http://localhost:${PORT}/api/canvas`);
   console.log(`    Canvas:     ${CANVAS_FILE}\n`);

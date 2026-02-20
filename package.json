@@ -1,5 +1,5 @@
 {
-  "name": "excalidraw-sync",
+  "name": "drawbridge",
   "version": "0.1.0",
   "description": "Collaborative Excalidraw canvas synced via local file — for AI + human drawing workflows",
   "type": "module",
@@ -9,7 +9,7 @@
     "start": "node server/index.js --serve"
   },
   "bin": {
-    "excalidraw-sync": "./cli/index.js"
+    "drawbridge": "./cli/index.js"
   },
   "dependencies": {
     "@excalidraw/excalidraw": "^0.18.0",

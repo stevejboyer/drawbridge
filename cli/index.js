@@ -10,7 +10,7 @@ const SERVER_URL = process.env.EXCALIDRAW_SYNC_URL || "http://localhost:3101";
 const [, , command, ...rawArgs] = process.argv;
 
 const HELP = `
-excalidraw-sync CLI
+drawbridge CLI
 
 Commands:
   read                     Read the full canvas JSON
@@ -211,7 +211,7 @@ async function main() {
     case "update": {
       const id = args[0];
       if (!id) {
-        console.error("Usage: excalidraw-sync update <id> <json>");
+        console.error("Usage: drawbridge update <id> <json>");
         process.exit(1);
       }
       const updates = JSON.parse(args.slice(1).join(" ") || (await readStdin()));
@@ -235,7 +235,7 @@ async function main() {
 
     case "delete": {
       if (args.length === 0) {
-        console.error("Usage: excalidraw-sync delete <id> [id...]");
+        console.error("Usage: drawbridge delete <id> [id...]");
         process.exit(1);
       }
       const idsToDelete = new Set(args);
